@@ -1,0 +1,39 @@
+.navbar-wrapper{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    background-color: #D9514EFF;
+    color: #2DA8D8FF;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar-logo{
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+.navbar-btn-container{
+    display: flex;
+    width: 60%;
+    justify-content: right;
+}
+
+.nav-btn{
+    background: unset;
+    border: unset;
+    color: inherit;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 1.2em;
+    outline: none;
+}
+
+.nav-btn::-moz-focus-inner{
+    border: 0;
+}
+
+
+
+
+
