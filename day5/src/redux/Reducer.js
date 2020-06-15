@@ -1,5 +1,5 @@
 
-import {BUY_ICE_CREAM, BUY_CAKE} from "./ActionTypes";
+import {BUY_ICE_CREAM, BUY_CAKE, ADD_CAKE} from "./ActionTypes";
 
 import {combineReducers} from "redux";
 
@@ -13,6 +13,8 @@ export default function rootReducer(state=initialState, action){
     const {type, payload} = action;
     switch(type){
         case BUY_CAKE:
+            let nextCountCake = state.numOfCakes - payload;
+            if(nextCountCake < 0) nextCountCake = 0;
             return {
                 ...state,
                 numOfCakes: state.numOfCakes - payload
@@ -21,6 +23,11 @@ export default function rootReducer(state=initialState, action){
             return {
                 ...state,
                 numOfIceCreams: state.numOfIceCreams - payload
+            };
+        case ADD_CAKE:
+            return {
+                ...state,
+                numOfCakes: state.numOfCakes + payload
             };
         default:
             return state;
@@ -58,3 +65,4 @@ export const combinedReducer = combineReducers({
     cake: cakeReducer,
     iceCream: iceCreamReducer
 });
+

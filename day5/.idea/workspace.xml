@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e8b9284-d9b7-4ebd-b5f9-d5b0d8a87a6a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Button.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Display.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/DisplayHooks.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/ActionCreators.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/ActionTypes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/Reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/Store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Cake.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/IceCream.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../day3/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../day3/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../day3/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../day3/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../day3/src/Components/List/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/../day3/src/Components/List/List.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ActionCreators.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ActionCreators.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/ActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/ActionTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/Reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Reducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592226338822</updated>
-      <workItem from="1592226341401" duration="7687000" />
+      <workItem from="1592226341401" duration="10406000" />
     </task>
     <servers />
   </component>
