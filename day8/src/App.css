@@ -1,0 +1,186 @@
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #203843;
+  color: white;
+  width: 100vw;
+  height: 80px;
+  align-items: center;
+}
+
+.nav-brand{
+  font-weight: bold;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand::before{
+  content: url("./assets/square.png");
+  font-size: 1em;
+}
+
+.nav-links{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.nav-items{
+  margin-left: 20%;
+  margin-right: 20%;
+  color: white;
+  text-decoration: none;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.card-container{
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  padding: 10px;
+  box-shadow: 0 10px 20px 10px #606060FF;
+  background-color: #cdcdcd;
+
+}
+
+.card-details{
+  display: flex;
+  flex-direction: column;
+}
+
+.card-data{
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.card-property{
+  font-size: large;
+  font-weight: bolder;
+}
+
+.card-btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.card-btn button{
+  width: 48%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #101820FF;
+  color: #ffffff;
+}
+
+.card-btn button:hover{
+  background-color: #606060FF;
+}
+
+
+.github-btn:after{
+  content: url("./Components/UserDetails/assets/github.png");
+  width: 64px;
+  height: 64px;
+  display: block;
+}
+
+.remove-friend-btn:after{
+  content: url("./Components/UserDetails/assets/cross.png");
+  width: 64px;
+  height: 64px;
+  display: block;
+}
+
+.add-friend-btn:after{
+  content: url("./Components/UserDetails/assets/tick.png");
+  width: 64px;
+  height: 64px;
+  display: block;
+}
+
+button{
+  outline: none;
+}
+
+button::-moz-focus-inner{
+  border: 0;
+}
+
+.small-card-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  width: 200px;
+  height: 300px;
+  position: relative;
+  box-shadow: 0 5px 20px 5px #606060FF;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+.blank-region{
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.4;
+  border-radius: 10px;
+  background: url("./Components/SmallCards/assets/avatar.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.small-card-content{
+  position: absolute;
+  z-index: 5;
+  bottom: 20px;
+}
+
+.small-card-btn{
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+  border-radius: 5px;
+  border: 2px solid #616247FF;
+  padding: 5px;
+}
+
+.small-card-btn:hover{
+  border: 2px solid #4f4f4e;
+}
+
+.wrapper{
+  display: flex;
+  width: 80vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-top: 20px;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+body{
+  background-color: #b3b3b3;
+}
