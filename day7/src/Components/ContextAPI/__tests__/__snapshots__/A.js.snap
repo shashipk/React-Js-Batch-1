@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component A works correctly Component A renders correctly 1`] = `
+<Fragment>
+  <span>
+     Hello from A 
+  </span>
+  <br />
+  <B />
+  <button
+    onClick={[MockFunction]}
+  >
+     Click Me
+  </button>
+</Fragment>
+`;
