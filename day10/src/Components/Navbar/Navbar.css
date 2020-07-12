@@ -1,0 +1,38 @@
+.nav-wrapper{
+    width: 100vw;
+    height: 70px;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #EF6079FF;
+    color: #F1F3FFFF;
+}
+
+.nav-brand span{
+    font-size: 1.4em;
+    font-weight: bolder;
+}
+
+.custom-dropdown{
+    background: inherit !important;
+    color: inherit !important;
+    border: unset !important;
+}
+
+.custom-dropdown:focus{
+    border: none;
+}
+
+.nav-item{
+    display: flex;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-link:hover{
+    color: inherit;
+}

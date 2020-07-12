@@ -1,0 +1,18 @@
+.footer-wrapper{
+    background-color: #F7CED7FF;
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    padding: 15px;
+}
+
+.footer-item{
+    width: 50%;
+    word-break: break-all;
+    color: #ef16a1;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}

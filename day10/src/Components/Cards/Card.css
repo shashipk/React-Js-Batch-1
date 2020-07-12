@@ -1,0 +1,29 @@
+.card-wrapper{
+    width: 250px;
+    height: 350px;
+    background: transparent;
+}
+
+.card-image{
+    position: absolute;
+    width: 250px;
+    height: 350px;
+    z-index: 1;
+    opacity: 0.7;
+    border-radius: 10px;
+}
+
+.card-header{
+    position: absolute;
+    margin-top: 180px;
+    z-index: 5;
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+.card-header:hover{
+    text-decoration: unset;
+    color: black;
+}

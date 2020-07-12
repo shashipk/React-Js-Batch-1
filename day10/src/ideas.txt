@@ -1,0 +1,22 @@
+E Commerce Website
+- Sections :
+    - Pantry (Price based, Type based, Discount based)
+        - Vegetables/Fruits
+        - Dairy
+        - Snacks
+    - Clothing (Gender, Age, Price, Discount)
+        - Men
+        - Women
+        - Children
+    - Technology (Category, Price, Discount)
+        - Mobiles
+        - Headphones
+        - Computers
+    - Sports (Category, Price, Discount)
+        - Cricket
+        - Football
+        - PS4
+- My Cart (addition, deletion, updating quantity)
+- Forms to update our shop (Admin Support)
+- Comments
+- Login
