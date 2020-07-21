@@ -7,12 +7,24 @@
     align-items: center;
     background-color: #EF6079FF;
     color: #F1F3FFFF;
+    z-index: 1000;
+}
+
+.nav-brand{
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-brand:hover{
+    text-decoration: unset;
+    color: inherit;
 }
 
 .nav-brand span{
     font-size: 1.4em;
     font-weight: bolder;
 }
+
 
 .custom-dropdown{
     background: inherit !important;
@@ -35,4 +47,8 @@
 
 .nav-link:hover{
     color: inherit;
+}
+
+.navbar-name{
+    margin: 7px;
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {InputGroup,
         FormControl,
         Dropdown,
@@ -8,17 +8,82 @@ import {InputGroup,
         Tooltip} from "react-bootstrap";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSearch, faShoppingCart} from "@fortawesome/free-solid-svg-icons";
+import {useSelector, useDispatch} from "react-redux";
+import {signInWithGoogle, auth, userProfileData, inventoryDataFetch} from '../../firebase/firebase.utils';
+import {LoginChange, StoreData, CategoryChange} from "../../redux/Actions";
+import {Link} from 'react-router-dom';
 import './Navbar.css';
 /*
 * Brand ----- [Search...] ----- Dropdown About-US My Cart
 * */
 
 export default function NavigationBar(){
+    const userData = useSelector(state => state.userData);
+    const dispatch = useDispatch();
+    useEffect(function(){
+        const subscribeToAuth = auth.onAuthStateChanged( async user => {
+            const userRef = await userProfileData(user);
+            if(!userRef) dispatch(LoginChange(null, null));
+            else{
+                userRef.onSnapshot(snapShot => {
+                    dispatch(LoginChange(snapShot.data(), userRef));
+                });
+            }
+        });
+        return function(){
+            subscribeToAuth();
+        }
+    }, []);
+
+
+    useEffect(async function(){
+        const inventoryRef = inventoryDataFetch();
+        inventoryRef.onSnapshot(snapShot => {
+            const inventoryData = snapShot.docs.map(item => {
+                const data = item.data();
+                const id = item.id;
+                return {
+                    id,
+                    ...data
+                };
+            });
+            console.log(inventoryData);
+            dispatch(StoreData(inventoryData));
+        });
+
+    }, []);
+
+
+    const UserDisplay = () => {
+        if(userData){
+            return (
+              <>
+                  <span className='navbar-name'>
+                      Hello,{userData.displayName.split(' ')[0]}
+                  </span>
+                  <OverlayTrigger placement='bottom' overlay={
+                  <Tooltip id='my-cart-tooltip'>
+                      My Cart
+                  </Tooltip>
+                    }>
+                    <Link to={'/cart'} className='nav-link'>
+                        <FontAwesomeIcon icon={faShoppingCart}/>
+                    </Link>
+                  </OverlayTrigger>
+                  <Button variant="success" bsPrefix='custom-dropdown' onClick={ () => auth.signOut() }> Sign Out </Button>
+              </>
+            );
+        }
+        return (
+            <Button variant="success" bsPrefix='custom-dropdown' onClick={ signInWithGoogle }> Sign In </Button>
+        );
+    };
+
     return(
         <div className='nav-wrapper'>
-            <div className='nav-brand'>
+            <Link to='/' className='nav-brand'>
                 <span> E-CART </span>
-            </div>
+            </Link>
             <InputGroup className="w-25">
             <InputGroup.Prepend>
                 <InputGroup.Text id="basic-addon1">
@@ -39,22 +104,14 @@ export default function NavigationBar(){
                     <Dropdown.Toggle split variant="success" id="dropdown-split-basic" className='custom-dropdown'/>
 
                     <Dropdown.Menu>
-                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                        <Dropdown.Item onClick={() => dispatch(CategoryChange('all'))}> All </Dropdown.Item>
+                        <Dropdown.Item onClick={() => dispatch(CategoryChange('pantry'))}> Pantry </Dropdown.Item>
+                        <Dropdown.Item onClick={() => dispatch(CategoryChange('clothing'))}> Clothing </Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
                 <a href='#' className='nav-link'> About Us </a>
+                <UserDisplay/>
 
-                <OverlayTrigger placement='bottom' overlay={
-                    <Tooltip id='my-cart-tooltip'>
-                        My Cart
-                    </Tooltip>
-                }>
-                    <a href='#' className='nav-link'>
-                        <FontAwesomeIcon icon={faShoppingCart}/>
-                    </a>
-                </OverlayTrigger>
             </div>
         </div>
     );

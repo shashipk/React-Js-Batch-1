@@ -4,10 +4,9 @@ E Commerce Website
         - Vegetables/Fruits
         - Dairy
         - Snacks
-    - Clothing (Gender, Age, Price, Discount)
+    - Clothing (Gender, Price, Discount)
         - Men
         - Women
-        - Children
     - Technology (Category, Price, Discount)
         - Mobiles
         - Headphones
@@ -20,3 +19,13 @@ E Commerce Website
 - Forms to update our shop (Admin Support)
 - Comments
 - Login
+
+
+Schema:
+    - inventory
+        - id
+            - name string
+            - section string
+            - type string
+            - price int
+            - image string

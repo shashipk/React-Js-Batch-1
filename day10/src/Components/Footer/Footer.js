@@ -1,22 +1,33 @@
 import React from "react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faRetweet} from "@fortawesome/free-solid-svg-icons";
+
 import './Footer.css';
 
 export default function Footer(){
     return(
-        <div className='footer-wrapper'>
-            <div className='footer-item'>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                    ut aliquip ex ea commodo consequat.
-                </p>
-            </div>
+        <footer>
+            <div className="footer-container">
+                <div className="footer-left-col">
+                    <img src={require('./logo.png')} alt="LOGO" className="logo" />
+                        <div className="social-media">
+                            <a href="#"><i className="fab fa-facebook-f" /></a>
+                            <a href="#"><i className="fab fa-twitter" /></a>
+                            <a href="#"><i className="fab fa-instagram" /></a>
+                            <a href="#"><i className="fab fa-youtube" /></a>
+                            <a href="#"><i className="fab fa-linkedin-in" /></a>
+                        </div>
+                        <p className="rights-text">© 2020 Created By DarkCode All Rights Reserved.</p>
+                </div>
 
-            <div className='footer-item'>
-                
+                <div className="footer-right-col">
+                    <h1>Our Newsletter</h1>
+                    <div className="footer-border" />
+                    <p>Enter Your Email to get our news and updates.</p>
+                    <form action="" className="newsletter-form">
+                        <input type="text" className="footer-txtb" placeholder="Enter Your Email" />
+                            <input type="submit" className="footer-btn" value="submit" />
+                    </form>
+                </div>
             </div>
-        </div>
+        </footer>
     );
 }

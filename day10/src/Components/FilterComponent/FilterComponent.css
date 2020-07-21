@@ -1,0 +1,7 @@
+.filter-container{
+    height: 80px;
+    display: flex;
+    justify-content: left;
+    margin: 10px;
+    width: 100%;
+}
